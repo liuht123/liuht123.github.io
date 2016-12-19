@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+    
+    <entry>
+      <title><![CDATA[我的第一篇博客]]></title>
+      <url>%2F2016%2F12%2F18%2Fpage_1%2F</url>
+      <content type="text"><![CDATA[欢迎大家来到我的博客， 这个博客非常有意思哦。。。 摘要：Github Pages和Hexo可以用于搭建自己的独立博客，本篇博客主要对Github Pages和Hexo进行简单的介绍。 关于GithubGithub的优点 GitHub是基于git实现的代码托管。git可能是目前最好用的版本控制系统了，非常受欢迎。 GitHub可以免费使用，并且快速稳定。 Github上面的世界很精彩，用久了你的眼界会开阔很多。 什么是Github PagesGithub Pages可以被认为是用户编写的、托管在github上的静态网页。 为什么要使用Github Pages 可以绑定你的域名(但暂时貌似只能绑定一个)。 简单快捷，使用Github Pages可以为你提供一个免费的服务器，免去了自己搭建服务器和写数据库的麻烦。 关于HexoHexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。 用Markdown写文章什么是Markdown？Markdown 是一种轻量级的「标记语言」，它的优点很多，目前也被越来越多的写作爱好者，撰稿者广泛使用。看到这里请不要被「标记」、「语言」所迷惑，Markdown 的语法十分简单。常用的标记符号也不超过十个，这种相对于更为复杂的HTML 标记语言来说，Markdown 可谓是十分轻量的，学习成本也不需要太多，且一旦熟悉这种语法规则，会有一劳永逸的效果。 Markdown有什么优点？ 专注你的文字内容而不是排版样式。 轻松的导出 HTML、PDF 和本身的 .md 文件。 纯文本内容，兼容所有的文本编辑器与字处理软件。 可读，直观。适合所有人的写作语言。 我该用什么工具？ Windows下可以使用 MarkdownPad2。 在 Mac OS X 上，我建议你用 Mou 这款免费且十分好用的 Markdown 编辑器。 Web 端上，我强烈推荐 简书 这款产品。]]></content>
+    </entry>
+
+    
+  
+  
+</search>

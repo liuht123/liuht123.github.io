@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-12-18T16:07:26.090Z</updated>
+  <updated>2016-12-19T12:58:24.937Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2016/12/18/page_1/"/>
     <id>http://yoursite.com/2016/12/18/page_1/</id>
     <published>2016-12-18T12:23:34.795Z</published>
-    <updated>2016-12-18T16:07:26.090Z</updated>
+    <updated>2016-12-19T12:58:24.937Z</updated>
     
     <content type="html"><![CDATA[<p>欢迎大家来到我的博客， 这个博客非常有意思哦。。。</p>
 <p>摘要：Github Pages和Hexo可以用于搭建自己的独立博客，本篇博客主要对Github Pages和Hexo进行简单的介绍。</p>
@@ -30,6 +30,7 @@
 <li>Github上面的世界很精彩，用久了你的眼界会开阔很多。</li>
 </ul>
 <h3 id="什么是Github-Pages"><a href="#什么是Github-Pages" class="headerlink" title="什么是Github Pages"></a>什么是Github Pages</h3><p>Github Pages可以被认为是用户编写的、托管在github上的静态网页。</p>
+<a id="more"></a>
 <h3 id="为什么要使用Github-Pages"><a href="#为什么要使用Github-Pages" class="headerlink" title="为什么要使用Github Pages"></a>为什么要使用Github Pages</h3><ul>
 <li>可以绑定你的域名(但暂时貌似只能绑定一个)。</li>
 <li>简单快捷，使用Github Pages可以为你提供一个免费的服务器，免去了自己搭建服务器和写数据库的麻烦。</li>
@@ -53,10 +54,19 @@
     
       &lt;p&gt;欢迎大家来到我的博客， 这个博客非常有意思哦。。。&lt;/p&gt;
 &lt;p&gt;摘要：Github Pages和Hexo可以用于搭建自己的独立博客，本篇博客主要对Github Pages和Hexo进行简单的介绍。&lt;/p&gt;
-&lt;h2 id=&quot;关于Github&quot;&gt;&lt;a href=&quot;#关于Git
+&lt;h2 id=&quot;关于Github&quot;&gt;&lt;a href=&quot;#关于Github&quot; class=&quot;headerlink&quot; title=&quot;关于Github&quot;&gt;&lt;/a&gt;关于Github&lt;/h2&gt;&lt;h3 id=&quot;Github的优点&quot;&gt;&lt;a href=&quot;#Github的优点&quot; class=&quot;headerlink&quot; title=&quot;Github的优点&quot;&gt;&lt;/a&gt;Github的优点&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;GitHub是基于git实现的代码托管。git可能是目前最好用的版本控制系统了，非常受欢迎。&lt;/li&gt;
+&lt;li&gt;GitHub可以免费使用，并且快速稳定。&lt;/li&gt;
+&lt;li&gt;Github上面的世界很精彩，用久了你的眼界会开阔很多。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;什么是Github-Pages&quot;&gt;&lt;a href=&quot;#什么是Github-Pages&quot; class=&quot;headerlink&quot; title=&quot;什么是Github Pages&quot;&gt;&lt;/a&gt;什么是Github Pages&lt;/h3&gt;&lt;p&gt;Github Pages可以被认为是用户编写的、托管在github上的静态网页。&lt;/p&gt;
     
     </summary>
     
+      <category term="git" scheme="http://yoursite.com/categories/git/"/>
+    
+    
+      <category term="git" scheme="http://yoursite.com/tags/git/"/>
     
   </entry>
   
