@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-12-19T12:58:24.937Z</updated>
+  <updated>2016-12-19T14:54:16.967Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>我的第一篇博客</title>
+    <title>如何用Github Pages+Hexo+Markdown搭建一个独立博客（前言）</title>
     <link href="http://yoursite.com/2016/12/18/page_1/"/>
     <id>http://yoursite.com/2016/12/18/page_1/</id>
     <published>2016-12-18T12:23:34.795Z</published>
-    <updated>2016-12-19T12:58:24.937Z</updated>
+    <updated>2016-12-19T14:54:16.967Z</updated>
     
     <content type="html"><![CDATA[<p>欢迎大家来到我的博客， 这个博客非常有意思哦。。。</p>
 <p>摘要：Github Pages和Hexo可以用于搭建自己的独立博客，本篇博客主要对Github Pages和Hexo进行简单的介绍。</p>
