@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-12-19T14:54:16.967Z</updated>
+  <updated>2016-12-20T14:59:27.342Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,154 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如何美化Github Pages搭建的独立博客</title>
+    <link href="http://yoursite.com/2016/12/20/page_3/"/>
+    <id>http://yoursite.com/2016/12/20/page_3/</id>
+    <published>2016-12-20T14:31:18.846Z</published>
+    <updated>2016-12-20T14:59:27.342Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="一、进入Hexo的官网主题专栏"><a href="#一、进入Hexo的官网主题专栏" class="headerlink" title="一、进入Hexo的官网主题专栏"></a>一、进入Hexo的官网主题专栏</h2><h2 id="二、挑选我们喜欢的主题"><a href="#二、挑选我们喜欢的主题" class="headerlink" title="二、挑选我们喜欢的主题"></a>二、挑选我们喜欢的主题</h2><p>可以看到有很多主题给我们选，我们只要选择喜欢的主题点击进去，然后进入到它的github地址，我们只要把这个地址复制下来(例如我是选择：hexo-theme-next这个主题)</p>
+<h2 id="三、克隆主题"><a href="#三、克隆主题" class="headerlink" title="三、克隆主题"></a>三、克隆主题</h2><p>再打开Hexo文件夹下的themes目录，右键Git Bash，在命令行输入:</p>
+<pre><code>git clone https://github.com/iissnan/hexo-theme-next(此处地址替换成你需要使用的主题的地址)
+</code></pre><p>之后主题下载中，等待下载完成。</p>
+<h2 id="四、修改Hexo配置文件"><a href="#四、修改Hexo配置文件" class="headerlink" title="四、修改Hexo配置文件"></a>四、修改Hexo配置文件</h2><p>下载完成后，打开Hexo文件夹下的配置文件_config.yml</p>
+<p>修改参数为：<code>theme: hexo-theme-next</code></p>
+<a id="more"></a>
+<h2 id="五、部署主题，本地查看效果"><a href="#五、部署主题，本地查看效果" class="headerlink" title="五、部署主题，本地查看效果"></a>五、部署主题，本地查看效果</h2><p>返回Hexo目录，右键Git Bash，输入</p>
+<pre><code>hexo g
+hexo s
+</code></pre><p>打开浏览器，输入 <a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a> 即可看见我们的主题已经更换了。</p>
+<h2 id="六、如果效果满意，将它部署到Github上"><a href="#六、如果效果满意，将它部署到Github上" class="headerlink" title="六、如果效果满意，将它部署到Github上"></a>六、如果效果满意，将它部署到Github上</h2><p>打开Hexo文件夹，右键Git Bash，输入</p>
+<pre><code>hexo clean   (必须要，不然有时因为缓存问题，服务器更新不了主题)
+hexo g -d
+</code></pre><h2 id="七、打开自己的主页，即可看到修改后的效果"><a href="#七、打开自己的主页，即可看到修改后的效果" class="headerlink" title="七、打开自己的主页，即可看到修改后的效果"></a>七、打开自己的主页，即可看到修改后的效果</h2><p>更多修改效果请查看对应主题的说明文档。</p>
+<p>查看本主题（next）对应的说明文档，请点击<a href="http://theme-next.iissnan.com/" target="_blank" rel="external">http://theme-next.iissnan.com/</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;一、进入Hexo的官网主题专栏&quot;&gt;&lt;a href=&quot;#一、进入Hexo的官网主题专栏&quot; class=&quot;headerlink&quot; title=&quot;一、进入Hexo的官网主题专栏&quot;&gt;&lt;/a&gt;一、进入Hexo的官网主题专栏&lt;/h2&gt;&lt;h2 id=&quot;二、挑选我们喜欢的主题&quot;&gt;&lt;a href=&quot;#二、挑选我们喜欢的主题&quot; class=&quot;headerlink&quot; title=&quot;二、挑选我们喜欢的主题&quot;&gt;&lt;/a&gt;二、挑选我们喜欢的主题&lt;/h2&gt;&lt;p&gt;可以看到有很多主题给我们选，我们只要选择喜欢的主题点击进去，然后进入到它的github地址，我们只要把这个地址复制下来(例如我是选择：hexo-theme-next这个主题)&lt;/p&gt;
+&lt;h2 id=&quot;三、克隆主题&quot;&gt;&lt;a href=&quot;#三、克隆主题&quot; class=&quot;headerlink&quot; title=&quot;三、克隆主题&quot;&gt;&lt;/a&gt;三、克隆主题&lt;/h2&gt;&lt;p&gt;再打开Hexo文件夹下的themes目录，右键Git Bash，在命令行输入:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/iissnan/hexo-theme-next(此处地址替换成你需要使用的主题的地址)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;之后主题下载中，等待下载完成。&lt;/p&gt;
+&lt;h2 id=&quot;四、修改Hexo配置文件&quot;&gt;&lt;a href=&quot;#四、修改Hexo配置文件&quot; class=&quot;headerlink&quot; title=&quot;四、修改Hexo配置文件&quot;&gt;&lt;/a&gt;四、修改Hexo配置文件&lt;/h2&gt;&lt;p&gt;下载完成后，打开Hexo文件夹下的配置文件_config.yml&lt;/p&gt;
+&lt;p&gt;修改参数为：&lt;code&gt;theme: hexo-theme-next&lt;/code&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="git" scheme="http://yoursite.com/categories/git/"/>
+    
+      <category term="hexo" scheme="http://yoursite.com/categories/git/hexo/"/>
+    
+    
+      <category term="git" scheme="http://yoursite.com/tags/git/"/>
+    
+      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>利用Github Pages搭建独立博客简明教程</title>
+    <link href="http://yoursite.com/2016/12/20/page_2/"/>
+    <id>http://yoursite.com/2016/12/20/page_2/</id>
+    <published>2016-12-20T12:15:30.864Z</published>
+    <updated>2016-12-20T14:27:29.026Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="一、安装node-js"><a href="#一、安装node-js" class="headerlink" title="一、安装node.js"></a>一、安装node.js</h1><p>在 Windows 环境下安装 Node.js 非常简单，仅须到官网下载安装文件并执行即可完成安装,<br>不需要配置环境变量。</p>
+<h1 id="二、安装Git"><a href="#二、安装Git" class="headerlink" title="二、安装Git"></a>二、安装Git</h1><p>安装完后，右键点击Git Bash Here即可打开Git Shell。</p>
+<h2 id="Git基本操作"><a href="#Git基本操作" class="headerlink" title="Git基本操作"></a>Git基本操作</h2><p>git clone：将远程仓库复制到本地：git clone 项目地址<br>git init：新建一个仓库。<br>git pull：抓取远程仓库搜有分支更新合并到本地。<br>git add：跟踪新文件（把目标文件快件放入暂存区域）：git add 文件名/文件夹名，如果是跟踪全部修改过的文件：git add或者git add –all<br>git commit：提交你的修改：git commit -m “你的注释”<br>git push：推送你本地仓库的更新到远程仓库，语法为git push [远程名] [本地分支]：[远程分支]</p>
+<a id="more"></a>
+<h1 id="三、Hexo"><a href="#三、Hexo" class="headerlink" title="三、Hexo"></a>三、Hexo</h1><p>桌面右键鼠标，点击Git Bash Here，输入npm命令即可安装</p>
+<pre><code>npm install hexo-cli -g
+npm install hexo --save
+</code></pre><p>如果命令无法运行，可尝试更换taobao的npm源</p>
+<pre><code>npm install -g cnpm --registry==https://registry.npm.taobao.org
+</code></pre><h2 id="Hexo初始化配置"><a href="#Hexo初始化配置" class="headerlink" title="Hexo初始化配置"></a>Hexo初始化配置</h2><h3 id="创建Hexo文件夹"><a href="#创建Hexo文件夹" class="headerlink" title="创建Hexo文件夹"></a>创建Hexo文件夹</h3><p>安装完成后，新建目录如：F:\Blog\Hexo，进入文件夹右键鼠标，点击Git Bash Here，进入Git命令框，执行以下操作。</p>
+<pre><code>hexo init
+npm install
+</code></pre><p>安装完成后，Hexo将会在指定文件夹中新建所需的文件。</p>
+<h3 id="安装Hexo插件"><a href="#安装Hexo插件" class="headerlink" title="安装Hexo插件"></a>安装Hexo插件</h3><p>以下是Hexo的其他插件（进入Hexo文件夹）</p>
+<pre><code>npm install hexo-generator-index --save
+npm install hexo-generator-archive --save
+npm install hexo-generator-category --save
+npm install hexo-generator-tag --save
+npm install hexo-server --save
+npm install hexo-deployer-git --save
+npm install hexo-deployer-heroku --save
+npm install hexo-deployer-rsync --save
+npm install hexo-deployer-openshift --save
+npm install hexo-renderer-marked@0.2 --save
+npm install hexo-renderer-stylus@0.2 --save
+npm install hexo-generator-feed@1 --save
+npm install hexo-generator-sitemap@1 --save
+</code></pre><h3 id="本地查看效果"><a href="#本地查看效果" class="headerlink" title="本地查看效果"></a>本地查看效果</h3><p>进入Hexo文件夹并执行下面语句，执行完即可登录localhost:4000查看效果。</p>
+<pre><code>hexo g
+hexo s
+</code></pre><h2 id="将博客部署到Github-Pages上"><a href="#将博客部署到Github-Pages上" class="headerlink" title="将博客部署到Github Pages上"></a>将博客部署到Github Pages上</h2><h3 id="第一步、注册Github账号"><a href="#第一步、注册Github账号" class="headerlink" title="第一步、注册Github账号"></a>第一步、注册Github账号</h3><h3 id="第二步、创建项目代码库"><a href="#第二步、创建项目代码库" class="headerlink" title="第二步、创建项目代码库"></a>第二步、创建项目代码库</h3><p>注册完成后，创建一个Github Pages项目，点击New repository。</p>
+<p>创建注意要点：<br><strong>1.Repository name 项目名称必须为username.github.io</strong></p>
+<p><strong>2.选择Public</strong></p>
+<p><strong>3.勾选Initialize this repository with a README。最后点击创建。</strong></p>
+<h3 id="第三步、配置SSH密钥"><a href="#第三步、配置SSH密钥" class="headerlink" title="第三步、配置SSH密钥"></a>第三步、配置SSH密钥</h3><p>配置Github的SSH密钥可以让本地git项目与远程的github建立联系，让我们在本地写了代码之后直接通过git操作就可以实现本地代码与Github代码库的同步。</p>
+<p><strong>1.查看是否存在SSH密钥</strong><br>首先查看本机是否存在SSH keys，打开Git Bash，并运行。</p>
+<pre><code>cd ~/.ssh
+</code></pre><p>检查本机用户home目录下是否存在.ssh目录，如果不存在此目录，则进行第二步操作，否则，本机已经存在ssh公钥和私钥，直接进行第三步操作。</p>
+<p><strong>2.创建一对新的SSH密钥</strong></p>
+<pre><code>ssh-keygen -t rsa -C &quot;邮箱地址&quot;
+</code></pre><p>之后将会按照提供的邮箱地址，创建一对密钥，如下提示。</p>
+<pre><code>Generating public/private rsa key pair.
+Enter file in which to save the key(/c/Users/you/.ssh/id_rsa):[Press enter]
+</code></pre><p>直接回车，则将密钥按照默认文件进行存储。也可以输入特定的文件名，如：/c/Users/you/.ssh/github_rsa,接着，根据提示，输入密码和确认密码。</p>
+<pre><code>Enter passphrase (empty for no passphrase): [Type a passphrase]
+Enter same passphrase again: [Type passphrase again]
+</code></pre><p>输入完成之后，屏幕会显示如下信息：</p>
+<pre><code>Your identification has been saved in /c/Users/you/.ssh/id_rsa.
+Your public key has been saved in /c/Users/you/.ssh/id_rsa.pub.
+The key fingerprint is:
+01:0f:f4:3b:ca:85:d6:17:a1:7d:f0:68:9d:f0:a2:db your_email@example.com
+</code></pre><p><strong>3.在Github账户中添加公钥</strong><br>登录Github，进入Account Settings，选择SSH keys，粘贴密钥。</p>
+<p><strong>4.测试</strong><br>可以输入下面的命令，看看设置是否成功，git@github.com的部分不要修改：</p>
+<pre><code>$ ssh -T git@github.com
+</code></pre><p>如果是下面的反馈：</p>
+<pre><code>The authenticity of host &apos;github.com (207.97.227.239)&apos; can&apos;t be established.
+RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.
+Are you sure you want to continue connecting (yes/no)?
+</code></pre><p>输入yes，将会看到。</p>
+<pre><code>Hi cnfeat! You&apos;ve successfully authenticated, but GitHub does not provide shell access.
+</code></pre><p><strong>5.设置用户信息</strong><br>现在你已经可以通过SSH连接到GitHub了，还有一些个人信息需要完善的。Git会根据用户的名字和邮箱来记录提交。GitHub也是用这些信息来做权限的处理。</p>
+<pre><code>$ git config --global user.name &quot;cnfeat&quot;//用户名
+$ git config --global user.email  &quot;cnfeat@gmail.com&quot;//填写自己的邮箱
+</code></pre><p><strong>6.SSH key配置成功</strong><br>本机已成功连接到github。</p>
+<h3 id="第四步、将本地的Hexo文件更新到Github的库中"><a href="#第四步、将本地的Hexo文件更新到Github的库中" class="headerlink" title="第四步、将本地的Hexo文件更新到Github的库中"></a>第四步、将本地的Hexo文件更新到Github的库中</h3><p><strong>1.登录Github打开自己的项目username.github.io，复制项目地址。</strong></p>
+<p><strong>2.打开本地Hexo文件夹，修改文件夹下的_config.yml文件</strong></p>
+<pre><code>deploy:
+  type: git
+  repository: &quot;填写刚才复制的项目地址&quot;
+  branch: master
+</code></pre><p><strong>3.在Hexo文件夹下执行：</strong></p>
+<pre><code>hexo g
+hexo d
+</code></pre><p>或者直接执行</p>
+<pre><code>hexo g -d
+</code></pre><p>执行完之后会让你输入github的账号和密码，输入完后就可以登录我们自己的部署在Github Pages服务器上的博客了。对应的地址是 username.github.io。</p>
+<p><strong>4.在浏览器上输入自己的主页地址，即可看到自己的博客了。</strong></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;一、安装node-js&quot;&gt;&lt;a href=&quot;#一、安装node-js&quot; class=&quot;headerlink&quot; title=&quot;一、安装node.js&quot;&gt;&lt;/a&gt;一、安装node.js&lt;/h1&gt;&lt;p&gt;在 Windows 环境下安装 Node.js 非常简单，仅须到官网下载安装文件并执行即可完成安装,&lt;br&gt;不需要配置环境变量。&lt;/p&gt;
+&lt;h1 id=&quot;二、安装Git&quot;&gt;&lt;a href=&quot;#二、安装Git&quot; class=&quot;headerlink&quot; title=&quot;二、安装Git&quot;&gt;&lt;/a&gt;二、安装Git&lt;/h1&gt;&lt;p&gt;安装完后，右键点击Git Bash Here即可打开Git Shell。&lt;/p&gt;
+&lt;h2 id=&quot;Git基本操作&quot;&gt;&lt;a href=&quot;#Git基本操作&quot; class=&quot;headerlink&quot; title=&quot;Git基本操作&quot;&gt;&lt;/a&gt;Git基本操作&lt;/h2&gt;&lt;p&gt;git clone：将远程仓库复制到本地：git clone 项目地址&lt;br&gt;git init：新建一个仓库。&lt;br&gt;git pull：抓取远程仓库搜有分支更新合并到本地。&lt;br&gt;git add：跟踪新文件（把目标文件快件放入暂存区域）：git add 文件名/文件夹名，如果是跟踪全部修改过的文件：git add或者git add –all&lt;br&gt;git commit：提交你的修改：git commit -m “你的注释”&lt;br&gt;git push：推送你本地仓库的更新到远程仓库，语法为git push [远程名] [本地分支]：[远程分支]&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="git" scheme="http://yoursite.com/categories/git/"/>
+    
+    
+      <category term="git" scheme="http://yoursite.com/tags/git/"/>
+    
+  </entry>
   
   <entry>
     <title>如何用Github Pages+Hexo+Markdown搭建一个独立博客（前言）</title>
