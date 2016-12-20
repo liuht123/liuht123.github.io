@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-12-20T14:59:27.342Z</updated>
+  <updated>2016-12-20T15:52:46.861Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,38 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>git和svn的区别</title>
+    <link href="http://yoursite.com/2016/12/20/page_4/"/>
+    <id>http://yoursite.com/2016/12/20/page_4/</id>
+    <published>2016-12-20T15:09:55.295Z</published>
+    <updated>2016-12-20T15:52:46.861Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="1）Git是分布式的，SVN不是："><a href="#1）Git是分布式的，SVN不是：" class="headerlink" title="1）Git是分布式的，SVN不是："></a>1）Git是分布式的，SVN不是：</h2><p>这是git和其它非分布式的版本控制系统，例如SVN，CVS等，最核心的区别。好处是跟其他同事不会有太多的冲突，自己写的代码放在自己电脑上，一段时间后再提交、合并，也可以不用联网在本地提交。<br>git跟SVN一样有自己的集中式版本库或服务器。但git更倾向于被使用于分布式模式，也就是每个开发人员从中心版本库/服务器上chect out代码后会在自己的机器上克隆一个自己的版本库。可以这样说，如果你被困在一个不能连接网络的地方时，你仍然能够提交文件，查看历史版本记录，创建项目分支等。</p>
+<h2 id="2）git把内容按元数据方式存储，而SVN是按文件："><a href="#2）git把内容按元数据方式存储，而SVN是按文件：" class="headerlink" title="2）git把内容按元数据方式存储，而SVN是按文件："></a>2）git把内容按元数据方式存储，而SVN是按文件：</h2><p>所有的资源控制系统都是把文件的元信息隐藏在一个类似.svn,.cvs等的文件夹里。如果你把.git目录的体积大小跟.svn比较，你会发现它们差距很大。因为.git目录是处于你的机器上的一个克隆版的版本库，它拥有中心版本库上所有的东西，例如标签，分支，版本记录等。</p>
+<a id="more"></a>
+<h2 id="3）git没有一个全局的版本号，而SVN有"><a href="#3）git没有一个全局的版本号，而SVN有" class="headerlink" title="3）git没有一个全局的版本号，而SVN有"></a>3）git没有一个全局的版本号，而SVN有</h2><h2 id="4）git分支和SVN的分支不同："><a href="#4）git分支和SVN的分支不同：" class="headerlink" title="4）git分支和SVN的分支不同："></a>4）git分支和SVN的分支不同：</h2><p>分支在SVN中一点不特别，就是版本库中的另外的一个目录。如果你想知道是否合并了一个分支，你需要手工运行像这样的命令svn propget svn:mergeinfo，来确认代码是否被合并。然而，处理git的分支却是相当的简单和有趣。</p>
+<h2 id="5）git的内容完整性要优于SVN："><a href="#5）git的内容完整性要优于SVN：" class="headerlink" title="5）git的内容完整性要优于SVN："></a>5）git的内容完整性要优于SVN：</h2><p>git的内容存储使用的是SHA-1哈希算法。这能确保代码内容的完整性，确保在遇到磁盘故障和网络问题时降低对版本库的破坏。</p>
+<h2 id="6）git下载下来后，在本地不必联网就可以看到所有的log，很方便学习，SVN却需要联网；"><a href="#6）git下载下来后，在本地不必联网就可以看到所有的log，很方便学习，SVN却需要联网；" class="headerlink" title="6）git下载下来后，在本地不必联网就可以看到所有的log，很方便学习，SVN却需要联网；"></a>6）git下载下来后，在本地不必联网就可以看到所有的log，很方便学习，SVN却需要联网；</h2><h2 id="7）SVN在Commit前，我们都建议是先Update一下，跟本地的代码编译没问题，并确保开发的功能正常后再提交，git可能这种情况会少些。"><a href="#7）SVN在Commit前，我们都建议是先Update一下，跟本地的代码编译没问题，并确保开发的功能正常后再提交，git可能这种情况会少些。" class="headerlink" title="7）SVN在Commit前，我们都建议是先Update一下，跟本地的代码编译没问题，并确保开发的功能正常后再提交，git可能这种情况会少些。"></a>7）SVN在Commit前，我们都建议是先Update一下，跟本地的代码编译没问题，并确保开发的功能正常后再提交，git可能这种情况会少些。</h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;1）Git是分布式的，SVN不是：&quot;&gt;&lt;a href=&quot;#1）Git是分布式的，SVN不是：&quot; class=&quot;headerlink&quot; title=&quot;1）Git是分布式的，SVN不是：&quot;&gt;&lt;/a&gt;1）Git是分布式的，SVN不是：&lt;/h2&gt;&lt;p&gt;这是git和其它非分布式的版本控制系统，例如SVN，CVS等，最核心的区别。好处是跟其他同事不会有太多的冲突，自己写的代码放在自己电脑上，一段时间后再提交、合并，也可以不用联网在本地提交。&lt;br&gt;git跟SVN一样有自己的集中式版本库或服务器。但git更倾向于被使用于分布式模式，也就是每个开发人员从中心版本库/服务器上chect out代码后会在自己的机器上克隆一个自己的版本库。可以这样说，如果你被困在一个不能连接网络的地方时，你仍然能够提交文件，查看历史版本记录，创建项目分支等。&lt;/p&gt;
+&lt;h2 id=&quot;2）git把内容按元数据方式存储，而SVN是按文件：&quot;&gt;&lt;a href=&quot;#2）git把内容按元数据方式存储，而SVN是按文件：&quot; class=&quot;headerlink&quot; title=&quot;2）git把内容按元数据方式存储，而SVN是按文件：&quot;&gt;&lt;/a&gt;2）git把内容按元数据方式存储，而SVN是按文件：&lt;/h2&gt;&lt;p&gt;所有的资源控制系统都是把文件的元信息隐藏在一个类似.svn,.cvs等的文件夹里。如果你把.git目录的体积大小跟.svn比较，你会发现它们差距很大。因为.git目录是处于你的机器上的一个克隆版的版本库，它拥有中心版本库上所有的东西，例如标签，分支，版本记录等。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="git" scheme="http://yoursite.com/categories/git/"/>
+    
+      <category term="svn" scheme="http://yoursite.com/categories/git/svn/"/>
+    
+    
+      <category term="git" scheme="http://yoursite.com/tags/git/"/>
+    
+      <category term="svn" scheme="http://yoursite.com/tags/svn/"/>
+    
+  </entry>
   
   <entry>
     <title>如何美化Github Pages搭建的独立博客</title>
