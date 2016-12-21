@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="webservice,cxf," />
 
 
 
@@ -90,12 +90,19 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Liuht的博客">
-<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+<meta name="description" content="服务端开发的实现1.打开命令行操作界面，进入到cxf\bin目录下，输入wsdl2java  –server  –impl  wsdl的完整文件名，点击回车键，即生成了webservice服务端程序。D:\apache-cxf-2.2.4\bin&amp;gt;wsdl2java -server -impl xxxxxx.wsdl
+2.导入cxf的jar包3.在src目录下建立一个ApplicationC">
+<meta property="og:type" content="article">
+<meta property="og:title" content="用cxf开发服务端和客户端">
+<meta property="og:url" content="http://yoursite.com/2016/12/21/page_5/index.html">
 <meta property="og:site_name" content="Liuht的博客">
+<meta property="og:description" content="服务端开发的实现1.打开命令行操作界面，进入到cxf\bin目录下，输入wsdl2java  –server  –impl  wsdl的完整文件名，点击回车键，即生成了webservice服务端程序。D:\apache-cxf-2.2.4\bin&amp;gt;wsdl2java -server -impl xxxxxx.wsdl
+2.导入cxf的jar包3.在src目录下建立一个ApplicationC">
+<meta property="og:updated_time" content="2016-12-21T16:00:54.473Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Liuht的博客">
+<meta name="twitter:title" content="用cxf开发服务端和客户端">
+<meta name="twitter:description" content="服务端开发的实现1.打开命令行操作界面，进入到cxf\bin目录下，输入wsdl2java  –server  –impl  wsdl的完整文件名，点击回车键，即生成了webservice服务端程序。D:\apache-cxf-2.2.4\bin&amp;gt;wsdl2java -server -impl xxxxxx.wsdl
+2.导入cxf的jar包3.在src目录下建立一个ApplicationC">
 
 
 
@@ -123,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/page/2/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/12/21/page_5/"/>
 
 
 
 
 
-  <title> Liuht的博客 </title>
+  <title> 用cxf开发服务端和客户端 | Liuht的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -160,9 +167,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -284,9 +289,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -295,7 +300,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/18/page_1/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/21/page_5/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="liuht">
@@ -319,10 +324,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/12/18/page_1/" itemprop="url">
-                  如何用Github Pages+Hexo+Markdown搭建一个独立博客（前言）
-                </a>
+                用cxf开发服务端和客户端
               
             
           </h1>
@@ -335,8 +337,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-18T20:23:34+08:00">
-                2016-12-18
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-21T22:03:54+08:00">
+                2016-12-21
               </time>
             
 
@@ -354,8 +356,19 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/git/" itemprop="url" rel="index">
-                    <span itemprop="name">git</span>
+                  <a href="/categories/webservice/" itemprop="url" rel="index">
+                    <span itemprop="name">webservice</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/webservice/cxf/" itemprop="url" rel="index">
+                    <span itemprop="name">cxf</span>
                   </a>
                 </span>
 
@@ -389,56 +402,127 @@
       
 
       
-        
-          <p>欢迎大家来到我的博客， 这个博客非常有意思哦。。。</p>
-<p>摘要：Github Pages和Hexo可以用于搭建自己的独立博客，本篇博客主要对Github Pages和Hexo进行简单的介绍。</p>
-<h2 id="关于Github"><a href="#关于Github" class="headerlink" title="关于Github"></a>关于Github</h2><h3 id="Github的优点"><a href="#Github的优点" class="headerlink" title="Github的优点"></a>Github的优点</h3><ul>
-<li>GitHub是基于git实现的代码托管。git可能是目前最好用的版本控制系统了，非常受欢迎。</li>
-<li>GitHub可以免费使用，并且快速稳定。</li>
-<li>Github上面的世界很精彩，用久了你的眼界会开阔很多。</li>
-</ul>
-<h3 id="什么是Github-Pages"><a href="#什么是Github-Pages" class="headerlink" title="什么是Github Pages"></a>什么是Github Pages</h3><p>Github Pages可以被认为是用户编写的、托管在github上的静态网页。</p>
-          <!--noindex-->
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/12/18/page_1/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+        <h2 id="服务端开发的实现"><a href="#服务端开发的实现" class="headerlink" title="服务端开发的实现"></a>服务端开发的实现</h2><h3 id="1-打开命令行操作界面，进入到cxf-bin目录下，输入wsdl2java-–server-–impl-wsdl的完整文件名，点击回车键，即生成了webservice服务端程序。"><a href="#1-打开命令行操作界面，进入到cxf-bin目录下，输入wsdl2java-–server-–impl-wsdl的完整文件名，点击回车键，即生成了webservice服务端程序。" class="headerlink" title="1.打开命令行操作界面，进入到cxf\bin目录下，输入wsdl2java  –server  –impl  wsdl的完整文件名，点击回车键，即生成了webservice服务端程序。"></a>1.打开命令行操作界面，进入到cxf\bin目录下，输入wsdl2java  –server  –impl  wsdl的完整文件名，点击回车键，即生成了webservice服务端程序。</h3><pre><code>D:\apache-cxf-2.2.4\bin&gt;wsdl2java -server -impl xxxxxx.wsdl
+</code></pre><h3 id="2-导入cxf的jar包"><a href="#2-导入cxf的jar包" class="headerlink" title="2.导入cxf的jar包"></a>2.导入cxf的jar包</h3><h3 id="3-在src目录下建立一个ApplicationContext-xml文件，输入以下内容："><a href="#3-在src目录下建立一个ApplicationContext-xml文件，输入以下内容：" class="headerlink" title="3.在src目录下建立一个ApplicationContext.xml文件，输入以下内容："></a>3.在src目录下建立一个ApplicationContext.xml文件，输入以下内容：</h3><pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+xmlns:cxf=&quot;http://cxf.apache.org/core&quot;
+xmlns:soap=&quot;http://cxf.apache.org/bindings/soap&quot;
+xmlns:jaxws=&quot;http://cxf.apache.org/jaxws&quot;
+xsi:schemaLocation=&quot;http://www.springframework.org/schema/beanshttp://www.springframework.org/schema/beans/spring-beans.xsd
+http://cxf.apache.org/core http://cxf.apache.org/schemas/core.xsd
+http://cxf.apache.org/bindings/soap http://cxf.apache.org/schema/bindings/soap.xsd
+http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd&quot;&gt;
+
+&lt;import resource=&quot;classpath:META-INF/cxf/cxf.xml&quot; /&gt;
+&lt;import resource=&quot;classpath:META-INF/cxf/cxf-extension-soap.xml&quot; /&gt;
+&lt;import resource=&quot;classpath:META-INF/cxf/cxf-extension-local.xml&quot; /&gt;
+&lt;import resource=&quot;classpath:META-INF/cxf/cxf-extension-http.xml&quot; /&gt;
+&lt;import resource=&quot;classpath:META-INF/cxf/cxf-servlet.xml&quot; /&gt;
+&lt;!--  CIMCardAgreementService HTTP --&gt; 
+&lt;jaxws:endpoint id=&quot;CIMCardAgreementService&quot; implementor=&quot;com.bankcomm.pccc.service.cim.abstraction.atomic.pccc_cim_cimcardagreement.v1.CIMCardAgreementImpl&quot;
+address=&quot;/CIMCardAgreementService&quot;&gt;
+&lt;/jaxws:endpoint&gt;          
+&lt;/beans&gt;
+</code></pre><a id="more"></a>
+<p>其中id属性值依据具体的服务来决定，implementor属性值应填入：服务实现类的完整的包名加上类名，address属性值填入服务发布的相对地址，依据具体服务来决定</p>
+<h3 id="4-找到实现类的注释部分，将wsdlLocation-“”一段注释删除"><a href="#4-找到实现类的注释部分，将wsdlLocation-“”一段注释删除" class="headerlink" title="4.找到实现类的注释部分，将wsdlLocation = “”一段注释删除"></a>4.找到实现类的注释部分，将wsdlLocation = “”一段注释删除</h3><h3 id="5-找到工程的web-xml，输入以下内容"><a href="#5-找到工程的web-xml，输入以下内容" class="headerlink" title="5.找到工程的web.xml，输入以下内容"></a>5.找到工程的web.xml，输入以下内容</h3><pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;web-app id=&quot;WebApp_ID&quot; version=&quot;2.4&quot; 
+xmlns=&quot;http://java.sun.com/xml/ns/j2ee&quot; 
+xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; 
+xsi:schemaLocation=&quot;http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd&quot;&gt;
+&lt;display-name&gt;loanAcctMaintainServiceServer&lt;/display-name&gt;
+
+&lt;context-param&gt;
+&lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;
+&lt;param-value&gt;classpath:ApplicationContext.xml&lt;/param-value&gt;
+&lt;/context-param&gt;
+
+&lt;listener&gt;
+&lt;listener-class&gt;
+org.springframework.web.context.ContextLoaderListener
+&lt;/listener-class&gt;
+&lt;/listener&gt;
+
+&lt;servlet&gt;
+&lt;servlet-name&gt;CXFServlet&lt;/servlet-name&gt;
+&lt;servlet-class&gt;org.apache.cxf.transport.servlet.CXFServlet&lt;/servlet-class&gt;
+&lt;load-on-startup&gt;1&lt;/load-on-startup&gt;
+&lt;/servlet&gt;
+&lt;servlet-mapping&gt;
+&lt;servlet-name&gt;CXFServlet&lt;/servlet-name&gt;
+&lt;url-pattern&gt;/WS/*&lt;/url-pattern&gt;
+&lt;/servlet-mapping&gt;
+
+&lt;welcome-file-list&gt;
+&lt;welcome-file&gt;index.jsp&lt;/welcome-file&gt;
+&lt;/welcome-file-list&gt;
+&lt;/web-app&gt;
+</code></pre><h3 id="6-将服务部署到服务器上运行"><a href="#6-将服务部署到服务器上运行" class="headerlink" title="6.将服务部署到服务器上运行"></a>6.将服务部署到服务器上运行</h3><p>在浏览器的地址栏中输入<a href="http://服务器的IP：服务器上端口号/工程名/WS/，点击回车，查看。" target="_blank" rel="external">http://服务器的IP：服务器上端口号/工程名/WS/，点击回车，查看。</a></p>
+<h2 id="客户端开发实现"><a href="#客户端开发实现" class="headerlink" title="客户端开发实现"></a>客户端开发实现</h2><h3 id="1-打开命令行操作界面，进入到cxf-bin目录下，输入wsdl2java-–client-wsdl的完整文件名，点击回车键，即生成了webservice客户端程序。"><a href="#1-打开命令行操作界面，进入到cxf-bin目录下，输入wsdl2java-–client-wsdl的完整文件名，点击回车键，即生成了webservice客户端程序。" class="headerlink" title="1.打开命令行操作界面，进入到cxf\bin目录下，输入wsdl2java  –client wsdl的完整文件名，点击回车键，即生成了webservice客户端程序。"></a>1.打开命令行操作界面，进入到cxf\bin目录下，输入wsdl2java  –client wsdl的完整文件名，点击回车键，即生成了webservice客户端程序。</h3><pre><code>D:\apache-cxf-2.2.4\bin&gt;wsdl2java -client xxxxxx.wsdl
+</code></pre><h3 id="2-导入cxf的jar包-1"><a href="#2-导入cxf的jar包-1" class="headerlink" title="2.导入cxf的jar包"></a>2.导入cxf的jar包</h3><h3 id="3-编写客户端调用类"><a href="#3-编写客户端调用类" class="headerlink" title="3.编写客户端调用类"></a>3.编写客户端调用类</h3>
       
     </div>
 
     <div>
       
+        
+
+      
     </div>
 
     <div>
+      
+        
+
       
     </div>
 
 
     <footer class="post-footer">
       
-
+        <div class="post-tags">
+          
+            <a href="/tags/webservice/" rel="tag"># webservice</a>
+          
+            <a href="/tags/cxf/" rel="tag"># cxf</a>
+          
+        </div>
       
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/12/20/page_4/" rel="next" title="git和svn的区别">
+                <i class="fa fa-chevron-left"></i> git和svn的区别
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/12/21/page_6/" rel="prev" title="用axis开发服务端和客户端">
+                用axis开发服务端和客户端 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
-        <div class="post-eof"></div>
+
+      
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-  </nav>
-
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -446,6 +530,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -465,8 +553,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/touxiang.jpeg"
@@ -584,6 +681,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#服务端开发的实现"><span class="nav-number">1.</span> <span class="nav-text">服务端开发的实现</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-打开命令行操作界面，进入到cxf-bin目录下，输入wsdl2java-–server-–impl-wsdl的完整文件名，点击回车键，即生成了webservice服务端程序。"><span class="nav-number">1.1.</span> <span class="nav-text">1.打开命令行操作界面，进入到cxf\bin目录下，输入wsdl2java  –server  –impl  wsdl的完整文件名，点击回车键，即生成了webservice服务端程序。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-导入cxf的jar包"><span class="nav-number">1.2.</span> <span class="nav-text">2.导入cxf的jar包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-在src目录下建立一个ApplicationContext-xml文件，输入以下内容："><span class="nav-number">1.3.</span> <span class="nav-text">3.在src目录下建立一个ApplicationContext.xml文件，输入以下内容：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-找到实现类的注释部分，将wsdlLocation-“”一段注释删除"><span class="nav-number">1.4.</span> <span class="nav-text">4.找到实现类的注释部分，将wsdlLocation = “”一段注释删除</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-找到工程的web-xml，输入以下内容"><span class="nav-number">1.5.</span> <span class="nav-text">5.找到工程的web.xml，输入以下内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-将服务部署到服务器上运行"><span class="nav-number">1.6.</span> <span class="nav-text">6.将服务部署到服务器上运行</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#客户端开发实现"><span class="nav-number">2.</span> <span class="nav-text">客户端开发实现</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-打开命令行操作界面，进入到cxf-bin目录下，输入wsdl2java-–client-wsdl的完整文件名，点击回车键，即生成了webservice客户端程序。"><span class="nav-number">2.1.</span> <span class="nav-text">1.打开命令行操作界面，进入到cxf\bin目录下，输入wsdl2java  –client wsdl的完整文件名，点击回车键，即生成了webservice客户端程序。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-导入cxf的jar包-1"><span class="nav-number">2.2.</span> <span class="nav-text">2.导入cxf的jar包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-编写客户端调用类"><span class="nav-number">2.3.</span> <span class="nav-text">3.编写客户端调用类</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
     </div>
   </aside>
@@ -677,6 +790,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-12-20T15:52:46.861Z</updated>
+  <updated>2016-12-21T16:01:08.080Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,11 +16,169 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>用axis开发服务端和客户端</title>
+    <link href="http://yoursite.com/2016/12/21/page_6/"/>
+    <id>http://yoursite.com/2016/12/21/page_6/</id>
+    <published>2016-12-21T14:32:05.636Z</published>
+    <updated>2016-12-21T16:01:08.080Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="第一种方式"><a href="#第一种方式" class="headerlink" title="第一种方式"></a>第一种方式</h2><h3 id="1-导入axis-jar包"><a href="#1-导入axis-jar包" class="headerlink" title="1.导入axis jar包"></a>1.导入axis jar包</h3><h3 id="2-右键项目，Run-As-Run-Configurations-new一个Java-Application-点击search-选择wsdl2java-勾选第一个复选框。"><a href="#2-右键项目，Run-As-Run-Configurations-new一个Java-Application-点击search-选择wsdl2java-勾选第一个复选框。" class="headerlink" title="2.右键项目，Run As , Run Configurations , new一个Java Application , 点击search , 选择wsdl2java , 勾选第一个复选框。"></a>2.右键项目，Run As , Run Configurations , new一个Java Application , 点击search , 选择wsdl2java , 勾选第一个复选框。</h3><h3 id="3-点击Argumnets-在Program-arguments内输入以下内容（服务端：-t-s-wsdl文件路径-o-输出目录，客户端：-t-wsdl文件路径-o-输出目录）"><a href="#3-点击Argumnets-在Program-arguments内输入以下内容（服务端：-t-s-wsdl文件路径-o-输出目录，客户端：-t-wsdl文件路径-o-输出目录）" class="headerlink" title="3.点击Argumnets , 在Program arguments内输入以下内容（服务端：-t -s wsdl文件路径 -o 输出目录，客户端：-t wsdl文件路径 -o 输出目录）"></a>3.点击Argumnets , 在Program arguments内输入以下内容（服务端：-t -s wsdl文件路径 -o 输出目录，客户端：-t wsdl文件路径 -o 输出目录）</h3><p>-t：生成junit测试用例<br>-s：生成服务端代码<br>-o：代码输出目录</p>
+<h3 id="4-点击Apply-点击run-刷新项目，即在此项目下根据wsdl文件生成了服务端或客户端代码。"><a href="#4-点击Apply-点击run-刷新项目，即在此项目下根据wsdl文件生成了服务端或客户端代码。" class="headerlink" title="4.点击Apply, 点击run, 刷新项目，即在此项目下根据wsdl文件生成了服务端或客户端代码。"></a>4.点击Apply, 点击run, 刷新项目，即在此项目下根据wsdl文件生成了服务端或客户端代码。</h3><a id="more"></a>
+<h3 id="5-根据wsdl文件生成服务端或客户端后："><a href="#5-根据wsdl文件生成服务端或客户端后：" class="headerlink" title="5.根据wsdl文件生成服务端或客户端后："></a>5.根据wsdl文件生成服务端或客户端后：</h3><p>（1）客户端测试类：</p>
+<pre><code>public static void main(String[] args) throws ServiceException {
+     xxxxx_ServiceLocator serviceLocator = new xxxxx_ServiceLocator();
+
+     xxxxx_PortType service = serviceLocator.getxxxxx();
+     service.xxxxxx();
+}
+</code></pre><p>或者在junit的TestCase中测试。</p>
+<p>（2）服务端具体实现类写在###########SoapBindingImpl类中</p>
+<h2 id="第二种方式"><a href="#第二种方式" class="headerlink" title="第二种方式"></a>第二种方式</h2><p>写一个.bat文件<br>服务端：</p>
+<pre><code>set Axis_Lib=D:\Axis\axis-bin-1_4\axis-1_4\lib
+set Java_Cmd=java -Djava.ext.dirs=%Axis_Lib% 
+set Output_Path=C:\Users\xxxx\Desktop\axis-client
+%Java_Cmd% org.apache.axis.wsdl.WSDL2Java -o%Output_Path% C:\Users\xxxx\Desktop\wsdl\xxxxx.wsdl -s -t
+</code></pre><p>客户端：</p>
+<pre><code>set Axis_Lib=D:\Axis\axis-bin-1_4\axis-1_4\lib
+set Java_Cmd=java -Djava.ext.dirs=%Axis_Lib% 
+set Output_Path=C:\Users\xxxx\Desktop\axis-client
+%Java_Cmd% org.apache.axis.wsdl.WSDL2Java -o%Output_Path% C:\Users\xxxx\Desktop\wsdl\xxxx.wsdl -t
+</code></pre><p>Axis_Lib：axis jar包路径。<br>output_path：代码输出路径。</p>
+<p><strong> 服务端生成后，新建server-config.xml，复制deploy.xml内容至其中。</strong></p>
+<h3 id="xsd文件生成java类："><a href="#xsd文件生成java类：" class="headerlink" title="xsd文件生成java类："></a>xsd文件生成java类：</h3><p>1.把xsd文件复制到项目下。<br>2.右击xsd文件，选择Generate，JAXB Classes<br>3.选择Source folder，Package<br>4.next到finish。</p>
+<h3 id="备注："><a href="#备注：" class="headerlink" title="备注："></a>备注：</h3><p>服务端多值返回可以用StringHolder对象来处理，用StringHolder.value()获取值。<br>比如：服务端返回errorCode和errorMsg时，请求参数和返回参数写在一起，返回void。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;第一种方式&quot;&gt;&lt;a href=&quot;#第一种方式&quot; class=&quot;headerlink&quot; title=&quot;第一种方式&quot;&gt;&lt;/a&gt;第一种方式&lt;/h2&gt;&lt;h3 id=&quot;1-导入axis-jar包&quot;&gt;&lt;a href=&quot;#1-导入axis-jar包&quot; class=&quot;headerlink&quot; title=&quot;1.导入axis jar包&quot;&gt;&lt;/a&gt;1.导入axis jar包&lt;/h3&gt;&lt;h3 id=&quot;2-右键项目，Run-As-Run-Configurations-new一个Java-Application-点击search-选择wsdl2java-勾选第一个复选框。&quot;&gt;&lt;a href=&quot;#2-右键项目，Run-As-Run-Configurations-new一个Java-Application-点击search-选择wsdl2java-勾选第一个复选框。&quot; class=&quot;headerlink&quot; title=&quot;2.右键项目，Run As , Run Configurations , new一个Java Application , 点击search , 选择wsdl2java , 勾选第一个复选框。&quot;&gt;&lt;/a&gt;2.右键项目，Run As , Run Configurations , new一个Java Application , 点击search , 选择wsdl2java , 勾选第一个复选框。&lt;/h3&gt;&lt;h3 id=&quot;3-点击Argumnets-在Program-arguments内输入以下内容（服务端：-t-s-wsdl文件路径-o-输出目录，客户端：-t-wsdl文件路径-o-输出目录）&quot;&gt;&lt;a href=&quot;#3-点击Argumnets-在Program-arguments内输入以下内容（服务端：-t-s-wsdl文件路径-o-输出目录，客户端：-t-wsdl文件路径-o-输出目录）&quot; class=&quot;headerlink&quot; title=&quot;3.点击Argumnets , 在Program arguments内输入以下内容（服务端：-t -s wsdl文件路径 -o 输出目录，客户端：-t wsdl文件路径 -o 输出目录）&quot;&gt;&lt;/a&gt;3.点击Argumnets , 在Program arguments内输入以下内容（服务端：-t -s wsdl文件路径 -o 输出目录，客户端：-t wsdl文件路径 -o 输出目录）&lt;/h3&gt;&lt;p&gt;-t：生成junit测试用例&lt;br&gt;-s：生成服务端代码&lt;br&gt;-o：代码输出目录&lt;/p&gt;
+&lt;h3 id=&quot;4-点击Apply-点击run-刷新项目，即在此项目下根据wsdl文件生成了服务端或客户端代码。&quot;&gt;&lt;a href=&quot;#4-点击Apply-点击run-刷新项目，即在此项目下根据wsdl文件生成了服务端或客户端代码。&quot; class=&quot;headerlink&quot; title=&quot;4.点击Apply, 点击run, 刷新项目，即在此项目下根据wsdl文件生成了服务端或客户端代码。&quot;&gt;&lt;/a&gt;4.点击Apply, 点击run, 刷新项目，即在此项目下根据wsdl文件生成了服务端或客户端代码。&lt;/h3&gt;
+    
+    </summary>
+    
+      <category term="webservice" scheme="http://yoursite.com/categories/webservice/"/>
+    
+      <category term="axis" scheme="http://yoursite.com/categories/webservice/axis/"/>
+    
+    
+      <category term="webservice" scheme="http://yoursite.com/tags/webservice/"/>
+    
+      <category term="axis" scheme="http://yoursite.com/tags/axis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>用cxf开发服务端和客户端</title>
+    <link href="http://yoursite.com/2016/12/21/page_5/"/>
+    <id>http://yoursite.com/2016/12/21/page_5/</id>
+    <published>2016-12-21T14:03:54.778Z</published>
+    <updated>2016-12-21T16:00:54.473Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="服务端开发的实现"><a href="#服务端开发的实现" class="headerlink" title="服务端开发的实现"></a>服务端开发的实现</h2><h3 id="1-打开命令行操作界面，进入到cxf-bin目录下，输入wsdl2java-–server-–impl-wsdl的完整文件名，点击回车键，即生成了webservice服务端程序。"><a href="#1-打开命令行操作界面，进入到cxf-bin目录下，输入wsdl2java-–server-–impl-wsdl的完整文件名，点击回车键，即生成了webservice服务端程序。" class="headerlink" title="1.打开命令行操作界面，进入到cxf\bin目录下，输入wsdl2java  –server  –impl  wsdl的完整文件名，点击回车键，即生成了webservice服务端程序。"></a>1.打开命令行操作界面，进入到cxf\bin目录下，输入wsdl2java  –server  –impl  wsdl的完整文件名，点击回车键，即生成了webservice服务端程序。</h3><pre><code>D:\apache-cxf-2.2.4\bin&gt;wsdl2java -server -impl xxxxxx.wsdl
+</code></pre><h3 id="2-导入cxf的jar包"><a href="#2-导入cxf的jar包" class="headerlink" title="2.导入cxf的jar包"></a>2.导入cxf的jar包</h3><h3 id="3-在src目录下建立一个ApplicationContext-xml文件，输入以下内容："><a href="#3-在src目录下建立一个ApplicationContext-xml文件，输入以下内容：" class="headerlink" title="3.在src目录下建立一个ApplicationContext.xml文件，输入以下内容："></a>3.在src目录下建立一个ApplicationContext.xml文件，输入以下内容：</h3><pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+xmlns:cxf=&quot;http://cxf.apache.org/core&quot;
+xmlns:soap=&quot;http://cxf.apache.org/bindings/soap&quot;
+xmlns:jaxws=&quot;http://cxf.apache.org/jaxws&quot;
+xsi:schemaLocation=&quot;http://www.springframework.org/schema/beanshttp://www.springframework.org/schema/beans/spring-beans.xsd
+http://cxf.apache.org/core http://cxf.apache.org/schemas/core.xsd
+http://cxf.apache.org/bindings/soap http://cxf.apache.org/schema/bindings/soap.xsd
+http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd&quot;&gt;
+
+&lt;import resource=&quot;classpath:META-INF/cxf/cxf.xml&quot; /&gt;
+&lt;import resource=&quot;classpath:META-INF/cxf/cxf-extension-soap.xml&quot; /&gt;
+&lt;import resource=&quot;classpath:META-INF/cxf/cxf-extension-local.xml&quot; /&gt;
+&lt;import resource=&quot;classpath:META-INF/cxf/cxf-extension-http.xml&quot; /&gt;
+&lt;import resource=&quot;classpath:META-INF/cxf/cxf-servlet.xml&quot; /&gt;
+&lt;!--  CIMCardAgreementService HTTP --&gt; 
+&lt;jaxws:endpoint id=&quot;CIMCardAgreementService&quot; implementor=&quot;com.bankcomm.pccc.service.cim.abstraction.atomic.pccc_cim_cimcardagreement.v1.CIMCardAgreementImpl&quot;
+address=&quot;/CIMCardAgreementService&quot;&gt;
+&lt;/jaxws:endpoint&gt;          
+&lt;/beans&gt;
+</code></pre><a id="more"></a>
+<p>其中id属性值依据具体的服务来决定，implementor属性值应填入：服务实现类的完整的包名加上类名，address属性值填入服务发布的相对地址，依据具体服务来决定</p>
+<h3 id="4-找到实现类的注释部分，将wsdlLocation-“”一段注释删除"><a href="#4-找到实现类的注释部分，将wsdlLocation-“”一段注释删除" class="headerlink" title="4.找到实现类的注释部分，将wsdlLocation = “”一段注释删除"></a>4.找到实现类的注释部分，将wsdlLocation = “”一段注释删除</h3><h3 id="5-找到工程的web-xml，输入以下内容"><a href="#5-找到工程的web-xml，输入以下内容" class="headerlink" title="5.找到工程的web.xml，输入以下内容"></a>5.找到工程的web.xml，输入以下内容</h3><pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;web-app id=&quot;WebApp_ID&quot; version=&quot;2.4&quot; 
+xmlns=&quot;http://java.sun.com/xml/ns/j2ee&quot; 
+xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; 
+xsi:schemaLocation=&quot;http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd&quot;&gt;
+&lt;display-name&gt;loanAcctMaintainServiceServer&lt;/display-name&gt;
+
+&lt;context-param&gt;
+&lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;
+&lt;param-value&gt;classpath:ApplicationContext.xml&lt;/param-value&gt;
+&lt;/context-param&gt;
+
+&lt;listener&gt;
+&lt;listener-class&gt;
+org.springframework.web.context.ContextLoaderListener
+&lt;/listener-class&gt;
+&lt;/listener&gt;
+
+&lt;servlet&gt;
+&lt;servlet-name&gt;CXFServlet&lt;/servlet-name&gt;
+&lt;servlet-class&gt;org.apache.cxf.transport.servlet.CXFServlet&lt;/servlet-class&gt;
+&lt;load-on-startup&gt;1&lt;/load-on-startup&gt;
+&lt;/servlet&gt;
+&lt;servlet-mapping&gt;
+&lt;servlet-name&gt;CXFServlet&lt;/servlet-name&gt;
+&lt;url-pattern&gt;/WS/*&lt;/url-pattern&gt;
+&lt;/servlet-mapping&gt;
+
+&lt;welcome-file-list&gt;
+&lt;welcome-file&gt;index.jsp&lt;/welcome-file&gt;
+&lt;/welcome-file-list&gt;
+&lt;/web-app&gt;
+</code></pre><h3 id="6-将服务部署到服务器上运行"><a href="#6-将服务部署到服务器上运行" class="headerlink" title="6.将服务部署到服务器上运行"></a>6.将服务部署到服务器上运行</h3><p>在浏览器的地址栏中输入<a href="http://服务器的IP：服务器上端口号/工程名/WS/，点击回车，查看。" target="_blank" rel="external">http://服务器的IP：服务器上端口号/工程名/WS/，点击回车，查看。</a></p>
+<h2 id="客户端开发实现"><a href="#客户端开发实现" class="headerlink" title="客户端开发实现"></a>客户端开发实现</h2><h3 id="1-打开命令行操作界面，进入到cxf-bin目录下，输入wsdl2java-–client-wsdl的完整文件名，点击回车键，即生成了webservice客户端程序。"><a href="#1-打开命令行操作界面，进入到cxf-bin目录下，输入wsdl2java-–client-wsdl的完整文件名，点击回车键，即生成了webservice客户端程序。" class="headerlink" title="1.打开命令行操作界面，进入到cxf\bin目录下，输入wsdl2java  –client wsdl的完整文件名，点击回车键，即生成了webservice客户端程序。"></a>1.打开命令行操作界面，进入到cxf\bin目录下，输入wsdl2java  –client wsdl的完整文件名，点击回车键，即生成了webservice客户端程序。</h3><pre><code>D:\apache-cxf-2.2.4\bin&gt;wsdl2java -client xxxxxx.wsdl
+</code></pre><h3 id="2-导入cxf的jar包-1"><a href="#2-导入cxf的jar包-1" class="headerlink" title="2.导入cxf的jar包"></a>2.导入cxf的jar包</h3><h3 id="3-编写客户端调用类"><a href="#3-编写客户端调用类" class="headerlink" title="3.编写客户端调用类"></a>3.编写客户端调用类</h3>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;服务端开发的实现&quot;&gt;&lt;a href=&quot;#服务端开发的实现&quot; class=&quot;headerlink&quot; title=&quot;服务端开发的实现&quot;&gt;&lt;/a&gt;服务端开发的实现&lt;/h2&gt;&lt;h3 id=&quot;1-打开命令行操作界面，进入到cxf-bin目录下，输入wsdl2java-–server-–impl-wsdl的完整文件名，点击回车键，即生成了webservice服务端程序。&quot;&gt;&lt;a href=&quot;#1-打开命令行操作界面，进入到cxf-bin目录下，输入wsdl2java-–server-–impl-wsdl的完整文件名，点击回车键，即生成了webservice服务端程序。&quot; class=&quot;headerlink&quot; title=&quot;1.打开命令行操作界面，进入到cxf\bin目录下，输入wsdl2java  –server  –impl  wsdl的完整文件名，点击回车键，即生成了webservice服务端程序。&quot;&gt;&lt;/a&gt;1.打开命令行操作界面，进入到cxf\bin目录下，输入wsdl2java  –server  –impl  wsdl的完整文件名，点击回车键，即生成了webservice服务端程序。&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;D:\apache-cxf-2.2.4\bin&amp;gt;wsdl2java -server -impl xxxxxx.wsdl
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;2-导入cxf的jar包&quot;&gt;&lt;a href=&quot;#2-导入cxf的jar包&quot; class=&quot;headerlink&quot; title=&quot;2.导入cxf的jar包&quot;&gt;&lt;/a&gt;2.导入cxf的jar包&lt;/h3&gt;&lt;h3 id=&quot;3-在src目录下建立一个ApplicationContext-xml文件，输入以下内容：&quot;&gt;&lt;a href=&quot;#3-在src目录下建立一个ApplicationContext-xml文件，输入以下内容：&quot; class=&quot;headerlink&quot; title=&quot;3.在src目录下建立一个ApplicationContext.xml文件，输入以下内容：&quot;&gt;&lt;/a&gt;3.在src目录下建立一个ApplicationContext.xml文件，输入以下内容：&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;
+&amp;lt;beans xmlns=&amp;quot;http://www.springframework.org/schema/beans&amp;quot;
+xmlns:xsi=&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot;
+xmlns:cxf=&amp;quot;http://cxf.apache.org/core&amp;quot;
+xmlns:soap=&amp;quot;http://cxf.apache.org/bindings/soap&amp;quot;
+xmlns:jaxws=&amp;quot;http://cxf.apache.org/jaxws&amp;quot;
+xsi:schemaLocation=&amp;quot;http://www.springframework.org/schema/beanshttp://www.springframework.org/schema/beans/spring-beans.xsd
+http://cxf.apache.org/core http://cxf.apache.org/schemas/core.xsd
+http://cxf.apache.org/bindings/soap http://cxf.apache.org/schema/bindings/soap.xsd
+http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd&amp;quot;&amp;gt;
+
+&amp;lt;import resource=&amp;quot;classpath:META-INF/cxf/cxf.xml&amp;quot; /&amp;gt;
+&amp;lt;import resource=&amp;quot;classpath:META-INF/cxf/cxf-extension-soap.xml&amp;quot; /&amp;gt;
+&amp;lt;import resource=&amp;quot;classpath:META-INF/cxf/cxf-extension-local.xml&amp;quot; /&amp;gt;
+&amp;lt;import resource=&amp;quot;classpath:META-INF/cxf/cxf-extension-http.xml&amp;quot; /&amp;gt;
+&amp;lt;import resource=&amp;quot;classpath:META-INF/cxf/cxf-servlet.xml&amp;quot; /&amp;gt;
+&amp;lt;!--  CIMCardAgreementService HTTP --&amp;gt; 
+&amp;lt;jaxws:endpoint id=&amp;quot;CIMCardAgreementService&amp;quot; implementor=&amp;quot;com.bankcomm.pccc.service.cim.abstraction.atomic.pccc_cim_cimcardagreement.v1.CIMCardAgreementImpl&amp;quot;
+address=&amp;quot;/CIMCardAgreementService&amp;quot;&amp;gt;
+&amp;lt;/jaxws:endpoint&amp;gt;          
+&amp;lt;/beans&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+    
+    </summary>
+    
+      <category term="webservice" scheme="http://yoursite.com/categories/webservice/"/>
+    
+      <category term="cxf" scheme="http://yoursite.com/categories/webservice/cxf/"/>
+    
+    
+      <category term="webservice" scheme="http://yoursite.com/tags/webservice/"/>
+    
+      <category term="cxf" scheme="http://yoursite.com/tags/cxf/"/>
+    
+  </entry>
+  
+  <entry>
     <title>git和svn的区别</title>
     <link href="http://yoursite.com/2016/12/20/page_4/"/>
     <id>http://yoursite.com/2016/12/20/page_4/</id>
     <published>2016-12-20T15:09:55.295Z</published>
-    <updated>2016-12-20T15:52:46.861Z</updated>
+    <updated>2016-12-21T16:01:51.987Z</updated>
     
     <content type="html"><![CDATA[<h2 id="1）Git是分布式的，SVN不是："><a href="#1）Git是分布式的，SVN不是：" class="headerlink" title="1）Git是分布式的，SVN不是："></a>1）Git是分布式的，SVN不是：</h2><p>这是git和其它非分布式的版本控制系统，例如SVN，CVS等，最核心的区别。好处是跟其他同事不会有太多的冲突，自己写的代码放在自己电脑上，一段时间后再提交、合并，也可以不用联网在本地提交。<br>git跟SVN一样有自己的集中式版本库或服务器。但git更倾向于被使用于分布式模式，也就是每个开发人员从中心版本库/服务器上chect out代码后会在自己的机器上克隆一个自己的版本库。可以这样说，如果你被困在一个不能连接网络的地方时，你仍然能够提交文件，查看历史版本记录，创建项目分支等。</p>
 <h2 id="2）git把内容按元数据方式存储，而SVN是按文件："><a href="#2）git把内容按元数据方式存储，而SVN是按文件：" class="headerlink" title="2）git把内容按元数据方式存储，而SVN是按文件："></a>2）git把内容按元数据方式存储，而SVN是按文件：</h2><p>所有的资源控制系统都是把文件的元信息隐藏在一个类似.svn,.cvs等的文件夹里。如果你把.git目录的体积大小跟.svn比较，你会发现它们差距很大。因为.git目录是处于你的机器上的一个克隆版的版本库，它拥有中心版本库上所有的东西，例如标签，分支，版本记录等。</p>
@@ -52,15 +210,15 @@
     <link href="http://yoursite.com/2016/12/20/page_3/"/>
     <id>http://yoursite.com/2016/12/20/page_3/</id>
     <published>2016-12-20T14:31:18.846Z</published>
-    <updated>2016-12-20T14:59:27.342Z</updated>
+    <updated>2016-12-21T16:00:01.137Z</updated>
     
     <content type="html"><![CDATA[<h2 id="一、进入Hexo的官网主题专栏"><a href="#一、进入Hexo的官网主题专栏" class="headerlink" title="一、进入Hexo的官网主题专栏"></a>一、进入Hexo的官网主题专栏</h2><h2 id="二、挑选我们喜欢的主题"><a href="#二、挑选我们喜欢的主题" class="headerlink" title="二、挑选我们喜欢的主题"></a>二、挑选我们喜欢的主题</h2><p>可以看到有很多主题给我们选，我们只要选择喜欢的主题点击进去，然后进入到它的github地址，我们只要把这个地址复制下来(例如我是选择：hexo-theme-next这个主题)</p>
 <h2 id="三、克隆主题"><a href="#三、克隆主题" class="headerlink" title="三、克隆主题"></a>三、克隆主题</h2><p>再打开Hexo文件夹下的themes目录，右键Git Bash，在命令行输入:</p>
 <pre><code>git clone https://github.com/iissnan/hexo-theme-next(此处地址替换成你需要使用的主题的地址)
 </code></pre><p>之后主题下载中，等待下载完成。</p>
+<a id="more"></a>
 <h2 id="四、修改Hexo配置文件"><a href="#四、修改Hexo配置文件" class="headerlink" title="四、修改Hexo配置文件"></a>四、修改Hexo配置文件</h2><p>下载完成后，打开Hexo文件夹下的配置文件_config.yml</p>
 <p>修改参数为：<code>theme: hexo-theme-next</code></p>
-<a id="more"></a>
 <h2 id="五、部署主题，本地查看效果"><a href="#五、部署主题，本地查看效果" class="headerlink" title="五、部署主题，本地查看效果"></a>五、部署主题，本地查看效果</h2><p>返回Hexo目录，右键Git Bash，输入</p>
 <pre><code>hexo g
 hexo s
@@ -78,8 +236,6 @@ hexo g -d
 &lt;h2 id=&quot;三、克隆主题&quot;&gt;&lt;a href=&quot;#三、克隆主题&quot; class=&quot;headerlink&quot; title=&quot;三、克隆主题&quot;&gt;&lt;/a&gt;三、克隆主题&lt;/h2&gt;&lt;p&gt;再打开Hexo文件夹下的themes目录，右键Git Bash，在命令行输入:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;git clone https://github.com/iissnan/hexo-theme-next(此处地址替换成你需要使用的主题的地址)
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;之后主题下载中，等待下载完成。&lt;/p&gt;
-&lt;h2 id=&quot;四、修改Hexo配置文件&quot;&gt;&lt;a href=&quot;#四、修改Hexo配置文件&quot; class=&quot;headerlink&quot; title=&quot;四、修改Hexo配置文件&quot;&gt;&lt;/a&gt;四、修改Hexo配置文件&lt;/h2&gt;&lt;p&gt;下载完成后，打开Hexo文件夹下的配置文件_config.yml&lt;/p&gt;
-&lt;p&gt;修改参数为：&lt;code&gt;theme: hexo-theme-next&lt;/code&gt;&lt;/p&gt;
     
     </summary>
     
@@ -99,7 +255,7 @@ hexo g -d
     <link href="http://yoursite.com/2016/12/20/page_2/"/>
     <id>http://yoursite.com/2016/12/20/page_2/</id>
     <published>2016-12-20T12:15:30.864Z</published>
-    <updated>2016-12-20T14:27:29.026Z</updated>
+    <updated>2016-12-21T15:59:52.291Z</updated>
     
     <content type="html"><![CDATA[<h1 id="一、安装node-js"><a href="#一、安装node-js" class="headerlink" title="一、安装node.js"></a>一、安装node.js</h1><p>在 Windows 环境下安装 Node.js 非常简单，仅须到官网下载安装文件并执行即可完成安装,<br>不需要配置环境变量。</p>
 <h1 id="二、安装Git"><a href="#二、安装Git" class="headerlink" title="二、安装Git"></a>二、安装Git</h1><p>安装完后，右键点击Git Bash Here即可打开Git Shell。</p>
@@ -200,7 +356,7 @@ hexo d
     <link href="http://yoursite.com/2016/12/18/page_1/"/>
     <id>http://yoursite.com/2016/12/18/page_1/</id>
     <published>2016-12-18T12:23:34.795Z</published>
-    <updated>2016-12-19T14:54:16.967Z</updated>
+    <updated>2016-12-21T16:02:32.521Z</updated>
     
     <content type="html"><![CDATA[<p>欢迎大家来到我的博客， 这个博客非常有意思哦。。。</p>
 <p>摘要：Github Pages和Hexo可以用于搭建自己的独立博客，本篇博客主要对Github Pages和Hexo进行简单的介绍。</p>
