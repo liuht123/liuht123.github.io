@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-12-21T16:01:08.080Z</updated>
+  <updated>2017-01-04T02:04:39.873Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,47 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux导入导出mongo脚本</title>
+    <link href="http://yoursite.com/2017/01/04/page_7/"/>
+    <id>http://yoursite.com/2017/01/04/page_7/</id>
+    <published>2017-01-04T01:56:18.189Z</published>
+    <updated>2017-01-04T02:04:39.873Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="linux下导出mongo数据库脚本（-json）"><a href="#linux下导出mongo数据库脚本（-json）" class="headerlink" title="linux下导出mongo数据库脚本（.json）"></a>linux下导出mongo数据库脚本（.json）</h2><p>1.进入mongo的bin目录下。</p>
+<p>2.执行./mongoexport –host ip –port 端口号 –db 数据库名 –collection 集合名 -o 导出的文件名（.json文件）</p>
+<p>3.导出完成。</p>
+<h2 id="linux下导入数据库脚本（-json）"><a href="#linux下导入数据库脚本（-json）" class="headerlink" title="linux下导入数据库脚本（.json）"></a>linux下导入数据库脚本（.json）</h2><p>1.将mongo脚本.json文件上传至服务器mongodb目录下。</p>
+<p>2.进入mongo的bin目录下。</p>
+<p>3.执行./mongoimport –host ip –port 端口号 –db 数据库名 –collection 集合名 –file 脚本地址（.json） –upsert</p>
+<p>4.导入完成</p>
+<a id="more"></a>
+<p>–host：ip地址<br>–port：端口号<br>–db：数据库名<br>–collection：集合名<br>–file：指定从哪一个文件中导入数据<br>–upsert：以新增或更新的方式导入数据<br>–o：指定导出数据到哪一个文件中</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;linux下导出mongo数据库脚本（-json）&quot;&gt;&lt;a href=&quot;#linux下导出mongo数据库脚本（-json）&quot; class=&quot;headerlink&quot; title=&quot;linux下导出mongo数据库脚本（.json）&quot;&gt;&lt;/a&gt;linux下导出mongo数据库脚本（.json）&lt;/h2&gt;&lt;p&gt;1.进入mongo的bin目录下。&lt;/p&gt;
+&lt;p&gt;2.执行./mongoexport –host ip –port 端口号 –db 数据库名 –collection 集合名 -o 导出的文件名（.json文件）&lt;/p&gt;
+&lt;p&gt;3.导出完成。&lt;/p&gt;
+&lt;h2 id=&quot;linux下导入数据库脚本（-json）&quot;&gt;&lt;a href=&quot;#linux下导入数据库脚本（-json）&quot; class=&quot;headerlink&quot; title=&quot;linux下导入数据库脚本（.json）&quot;&gt;&lt;/a&gt;linux下导入数据库脚本（.json）&lt;/h2&gt;&lt;p&gt;1.将mongo脚本.json文件上传至服务器mongodb目录下。&lt;/p&gt;
+&lt;p&gt;2.进入mongo的bin目录下。&lt;/p&gt;
+&lt;p&gt;3.执行./mongoimport –host ip –port 端口号 –db 数据库名 –collection 集合名 –file 脚本地址（.json） –upsert&lt;/p&gt;
+&lt;p&gt;4.导入完成&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
+    
+      <category term="mongo" scheme="http://yoursite.com/categories/Linux/mongo/"/>
+    
+    
+      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+    
+      <category term="mongo" scheme="http://yoursite.com/tags/mongo/"/>
+    
+  </entry>
   
   <entry>
     <title>用axis开发服务端和客户端</title>

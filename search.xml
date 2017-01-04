@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[Linux导入导出mongo脚本]]></title>
+      <url>%2F2017%2F01%2F04%2Fpage_7%2F</url>
+      <content type="text"><![CDATA[linux下导出mongo数据库脚本（.json）1.进入mongo的bin目录下。 2.执行./mongoexport –host ip –port 端口号 –db 数据库名 –collection 集合名 -o 导出的文件名（.json文件） 3.导出完成。 linux下导入数据库脚本（.json）1.将mongo脚本.json文件上传至服务器mongodb目录下。 2.进入mongo的bin目录下。 3.执行./mongoimport –host ip –port 端口号 –db 数据库名 –collection 集合名 –file 脚本地址（.json） –upsert 4.导入完成 –host：ip地址–port：端口号–db：数据库名–collection：集合名–file：指定从哪一个文件中导入数据–upsert：以新增或更新的方式导入数据–o：指定导出数据到哪一个文件中]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[用axis开发服务端和客户端]]></title>
       <url>%2F2016%2F12%2F21%2Fpage_6%2F</url>
       <content type="text"><![CDATA[第一种方式1.导入axis jar包2.右键项目，Run As , Run Configurations , new一个Java Application , 点击search , 选择wsdl2java , 勾选第一个复选框。3.点击Argumnets , 在Program arguments内输入以下内容（服务端：-t -s wsdl文件路径 -o 输出目录，客户端：-t wsdl文件路径 -o 输出目录）-t：生成junit测试用例-s：生成服务端代码-o：代码输出目录 4.点击Apply, 点击run, 刷新项目，即在此项目下根据wsdl文件生成了服务端或客户端代码。 5.根据wsdl文件生成服务端或客户端后：（1）客户端测试类： public static void main(String[] args) throws ServiceException { xxxxx_ServiceLocator serviceLocator = new xxxxx_ServiceLocator(); xxxxx_PortType service = serviceLocator.getxxxxx(); service.xxxxxx(); } 或者在junit的TestCase中测试。 （2）服务端具体实现类写在###########SoapBindingImpl类中 第二种方式写一个.bat文件服务端： set Axis_Lib=D:\Axis\axis-bin-1_4\axis-1_4\lib set Java_Cmd=java -Djava.ext.dirs=%Axis_Lib% set Output_Path=C:\Users\xxxx\Desktop\axis-client %Java_Cmd% org.apache.axis.wsdl.WSDL2Java -o%Output_Path% C:\Users\xxxx\Desktop\wsdl\xxxxx.wsdl -s -t 客户端： set Axis_Lib=D:\Axis\axis-bin-1_4\axis-1_4\lib set Java_Cmd=java -Djava.ext.dirs=%Axis_Lib% set Output_Path=C:\Users\xxxx\Desktop\axis-client %Java_Cmd% org.apache.axis.wsdl.WSDL2Java -o%Output_Path% C:\Users\xxxx\Desktop\wsdl\xxxx.wsdl -t Axis_Lib：axis jar包路径。output_path：代码输出路径。 服务端生成后，新建server-config.xml，复制deploy.xml内容至其中。 xsd文件生成java类：1.把xsd文件复制到项目下。2.右击xsd文件，选择Generate，JAXB Classes3.选择Source folder，Package4.next到finish。 备注：服务端多值返回可以用StringHolder对象来处理，用StringHolder.value()获取值。比如：服务端返回errorCode和errorMsg时，请求参数和返回参数写在一起，返回void。]]></content>
